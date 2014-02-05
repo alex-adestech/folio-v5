@@ -1,0 +1,105 @@
+
+/* ==================================================================
+
+   TYPOGRAPHY COMPONENTS
+
+   ================================================================== */
+
+/**
+ * p variations
+ */
+
+%text-sm {
+    @include scut-rem-fallback(16);
+}
+
+%text-md {
+    @include scut-rem-fallback(18);
+}
+
+%text-lg {
+    @include scut-rem-fallback(27);
+}
+
+%text-link {
+    font-style: italic;
+    text-align: center;
+}
+
+%text-light {
+    color: lighten($cText,40%);
+}
+
+
+
+/* Rule
+   ------------------------------------------------------------------ */
+
+.rule-base {
+    width: $column-width;
+    margin: 1.75rem auto 2rem;
+    border-bottom: .625rem solid $cText;
+}
+
+.rule-light-bottom {
+    border-bottom: 1px dotted lighten($cText,60%);
+}
+
+
+
+/* Header
+   ------------------------------------------------------------------ */
+
+header {
+    p, a {
+        @extend %text-lg;
+    }
+    p.contact,
+    p.contact a {
+        @extend %text-link;
+        @extend %text-sm;
+    }
+}
+
+
+
+/* Nav
+   ------------------------------------------------------------------ */
+
+nav {
+
+    #scroll-start a {
+        text-decoration: none;
+
+        h1 { margin-bottom: .25rem; }
+
+        summary {
+            @extend %text;
+            @extend %text-sm;
+            @extend %text-light;
+            font-family: $fontLite;
+            line-height: 1.2;
+            padding-bottom: 0.5rem;
+        }
+
+        h1,
+        summary,
+        p {
+            text-align: center;
+            color: #ccc;
+        }
+
+        p { margin-bottom: 0; }
+
+        &:hover {
+            h1,
+            summary,
+            p {
+                color: white;
+                transition: color 0.4s ease-out;
+            }
+        }
+    }
+}
+
+

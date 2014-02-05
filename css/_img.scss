@@ -1,0 +1,29 @@
+
+/* ==========================================================================
+
+   Images
+
+   ========================================================================== */
+
+/*
+ * Ref: http://css-tricks.com/rundown-of-handling-flexible-media/
+ * 1. Make img width respond to it's container width
+ * 2. Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ * 3. Remove gap under images the Foundation 5 way
+ */
+
+img {
+    max-width: 100%; /* 1 */
+    height: auto;
+    vertical-align: middle; /* 2 */
+    display: inline-block;  /* 3 */
+}
+
+/**
+ * Wrap an img to center it in a p.
+ */
+
+figure {
+    margin: 1.75rem 0 2rem;
+    text-align: center;
+}

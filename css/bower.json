@@ -1,0 +1,33 @@
+{
+  "name": "css",
+  "version": "0.0.1",
+  "authors": [
+    "Callum Flack <callumflack@gmail.com>"
+  ],
+  "description": "Folio website of Callum Flack, designer & developer [v5]",
+  "main": "index.jade",
+  "keywords": [
+    "design",
+    "development",
+    "harpjs",
+    "grunt",
+    "bower",
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "callumflack.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "~3.0.0",
+    "suit-flex-embed": "~1.4.0"
+  },
+  "devDependencies": {
+    "scut": "~0.9.0"
+  }
+}

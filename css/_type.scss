@@ -1,0 +1,88 @@
+
+/* ==================================================================
+
+   TYPOGRAPHY ELEMENTS
+
+   ================================================================== */
+
+/* p, a & lists
+   ------------------------------------------------------------------ */
+
+$textMargin: 0 auto .5rem;
+
+%text {
+    font-family: join($font, $body-sans-family);
+    line-height: 1.4;
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: normal;
+    text-rendering: optimizeLegibility;
+    // -webkit-font-smoothing: antialiased;
+    color: $cText;
+    margin: $textMargin;
+
+}
+
+
+p, a, li, span {
+    @extend %text;
+    @include scut-rem-fallback(19);
+}
+
+ul { margin: $textMargin; }
+
+li {
+    margin-left: 1rem;
+    margin-bottom: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+    &:hover,
+    &:focus {
+        color: $cLink;
+        text-decoration: none;
+    }
+    img { border: none; }
+}
+
+
+
+/* Headlines
+   ------------------------------------------------------------------ */
+
+@for $index from 1 through 6 {
+    h#{$index} {
+        @extend %text;
+        font-family: join($fontBold, $body-serif-family);
+        @include scut-rem-fallback(16);
+        // text-transform: uppercase;
+        // letter-spacing: 1px;
+    }
+}
+
+h1 {
+    font-family: $font;
+    @include scut-rem-fallback(60);
+    line-height: 0.9;
+
+    &.title {
+        font-family: join($fontBold, $body-serif-family);
+        @include scut-rem-fallback(33);
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+h2 {
+    font-family: $fontMed;
+    @include scut-rem-fallback(29);
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+

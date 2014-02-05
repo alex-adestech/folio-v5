@@ -1,0 +1,75 @@
+
+/* ==================================================================
+
+   BLOCK COMPONENTS
+
+   ================================================================== */
+
+
+/* Cover image: use with suit/flex-embed
+   ------------------------------------------------------------------ */
+
+.CoverImage {
+    @extend %CoverImage;
+    @media #{$medium-only} { max-height: scut-rem(500); }
+    @media #{$small-only} { max-height: scut-rem(320); }
+}
+
+.FlexEmbed--ratio:before {
+    padding-bottom: 56.25%;
+    @media #{$medium-only} { padding-bottom: 78%; }
+    @media #{$small-only}  { padding-bottom: 100%; }
+}
+
+.CoverImageTint {
+    @extend %Overlay;
+    background-color: rgba(black,0.75);
+}
+
+.CoverImage--vignette::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 120%;
+    width: 120%;
+    top: -10%;
+    left: -10%;
+    right: -10%;
+    // background-image: -webkit-gradient(radial, at 45% 50%, 0, at 45% 50%, 100, color-stop(20%, transparent), color-stop(80%, rgba(17,17,17,0.3)), color-stop(100%, rgba(17,17,17,0.6)));
+    // background-image: -webkit-radial-gradient(at 45% 50%, transparent 20%,rgba(17,17,17,0.3) 80%,rgba(17,17,17,0.6) 100%);
+    // background-image: -moz-radial-gradient(at 45% 50%, transparent 20%,rgba(17,17,17,0.3) 80%,rgba(17,17,17,0.6) 100%);
+    // background-image: -o-radial-gradient(at 45% 50%, transparent 20%,rgba(17,17,17,0.3) 80%,rgba(17,17,17,0.6) 100%);
+    // background-image: radial-gradient(at 45% 50%, transparent 20%,rgba(17,17,17,0.45) 80%,rgba(17,17,17,0.9) 100%);
+    background-image: radial-gradient(ellipse at 45% 50%, rgba(17,17,17,0.8) 20%,rgba(17,17,17,0.4) 80%,transparent 100%);
+    background-size: 110% 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+/* Vertical centering: http://codepen.io/shshaw/pen/gEiDt
+   ------------------------------------------------------------------ */
+
+.AbsoluteCenter {
+    height: 50%;
+    width: 50%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.is-Variable,
+.is-Variable > a {
+    display: table;
+    height: auto;
+    z-index: 1977;
+}
+
+
+
+
+

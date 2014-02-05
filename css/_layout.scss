@@ -1,0 +1,128 @@
+
+/* ==================================================================
+
+   LAYOUT
+
+   ================================================================== */
+
+/* Column widths
+   ------------------------------------------------------------------ */
+
+$text-width: 42rem;
+$column-width: 60rem;
+
+.column {
+    width: $column-width;
+}
+
+.column--text {
+    width: $text-width;
+}
+
+
+/* Blocks
+   ------------------------------------------------------------------ */
+
+header,
+nav,
+section,
+article {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    transform: translateZ(0);
+}
+
+header {
+    margin: 5rem auto 0;
+    background-color: $cBgDeep;
+
+    h2, p {
+        width: $text-width;
+    }
+}
+
+section {
+
+}
+
+article {
+
+}
+
+
+
+
+/* Scroll to nav
+   ------------------------------------------------------------------ */
+
+#scroll-arrow {
+    // position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 0 0 24rem;
+    margin: 0;
+
+    a {
+        display: block;
+        margin: 0;
+        padding-top: 2rem;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    p {
+        @extend %text-link;
+        // color: lighten($cText,40%);
+        margin: 0 auto 0.25rem;
+        opacity: 0;
+    }
+
+    img {
+        opacity: 0.4;
+    }
+
+    &:hover p,
+    &:hover img {
+        opacity: 1;
+        transition: all 0.3s ease-out;
+    }
+}
+
+
+
+
+/* Nav
+   ------------------------------------------------------------------ */
+
+nav {
+    margin: 2rem auto 0;
+    background-color: $cBgDeep;
+
+    /**
+     * Menu items
+     */
+
+     section {
+        height: scut-rem(300);
+        text-align: center;
+        text-shadow: 0 0 2px rgba(0,0,0,0.2);
+        color: #fff;
+        border-top: 1px solid #eaeaea;
+
+        &:first-of-type {
+            border-top: 0;
+        }
+     }
+
+
+
+    #boxdice {
+        background-image: url(/images/th-lg-boxdice.jpg);
+    }
+}
+
+
