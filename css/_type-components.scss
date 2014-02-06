@@ -9,17 +9,10 @@
  * p variations
  */
 
-%text-sm {
-    @include scut-rem-fallback(16);
-}
-
-%text-md {
-    @include scut-rem-fallback(18);
-}
-
-%text-lg {
-    @include scut-rem-fallback(27);
-}
+%text-sm { @include scut-rem-fallback(16);}
+%text-md { @include scut-rem-fallback(18);}
+%text-lg { @include scut-rem-fallback(27);}
+%text-super { @include scut-rem-fallback(40);}
 
 %text-link {
     font-style: italic;
@@ -32,32 +25,24 @@
 
 
 
-/* Rule
-   ------------------------------------------------------------------ */
-
-.rule-base {
-    width: $column-width;
-    margin: 1.75rem auto 2rem;
-    border-bottom: .625rem solid $cText;
-}
-
-.rule-light-bottom {
-    border-bottom: 1px dotted lighten($cText,60%);
-}
-
-
-
 /* Header
    ------------------------------------------------------------------ */
 
 header {
+}
+
+.intro {
     p, a {
-        @extend %text-lg;
+        font-family: "Freight Display";
+        // font-style: italic;
+        @extend %text-super;
+        line-height: 1.2;
     }
-    p.contact,
-    p.contact a {
-        @extend %text-link;
-        @extend %text-sm;
+
+    a {
+        text-decoration: none;
+        color: lighten($cText,40%);
+        &:hover { color: $cText; }
     }
 }
 
@@ -67,39 +52,53 @@ header {
    ------------------------------------------------------------------ */
 
 nav {
+    ul {
+        list-style: none;
+    }
 
-    #scroll-start a {
+    a {
         text-decoration: none;
 
-        h1 { margin-bottom: .25rem; }
-
-        summary {
-            @extend %text;
+        li {
+            width: 100%;
+            padding: scut-rem(6) scut-rem(6) scut-rem(8) 0;
+            border-top: 1px solid $cText;
+            border-left: 1px solid transparent;
+            border-right: 1px solid transparent;
+            border-bottom: 1px solid transparent;
             @extend %text-sm;
-            @extend %text-light;
-            font-family: $fontLite;
-            line-height: 1.2;
-            padding-bottom: 0.5rem;
+            font-style: italic;
         }
 
-        h1,
-        summary,
-        p {
-            text-align: center;
-            color: #ccc;
-        }
-
-        p { margin-bottom: 0; }
-
-        &:hover {
-            h1,
-            summary,
-            p {
-                color: white;
-                transition: color 0.4s ease-out;
-            }
+        &:hover li {
+            background-color: lighten($cLink,40%);
+            transition: background-color 1s ease-out;
+            // border-left-color: $cText;
+            // border-right-color: $cText;
+            // &:last-of-type: { border-bottom-color: $cText; }
         }
     }
 }
+
+.project-title {
+    @extend h1.title;
+    text-align: left;
+    margin-right: .5rem;
+}
+
+
+
+/* Contact (colophon)
+   ------------------------------------------------------------------ */
+
+p.contact,
+p.contact a {
+    @extend %text-sm;
+    @extend %text-link;
+}
+
+
+
+
 
 

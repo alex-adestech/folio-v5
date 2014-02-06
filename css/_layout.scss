@@ -8,16 +8,11 @@
 /* Column widths
    ------------------------------------------------------------------ */
 
-$text-width: 42rem;
+$text-width: 42.5rem;
 $column-width: 60rem;
 
-.column {
-    width: $column-width;
-}
-
-.column--text {
-    width: $text-width;
-}
+.column { width: $column-width; }
+.column--text { width: $text-width; }
 
 
 /* Blocks
@@ -25,25 +20,38 @@ $column-width: 60rem;
 
 header,
 nav,
+footer,
 section,
 article {
     position: relative;
-    width: 100%;
+    width: $text-width;
     height: auto;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     overflow: hidden;
     transform: translateZ(0);
 }
 
-header {
-    margin: 5rem auto 0;
-    background-color: $cBgDeep;
+$space-lg: 5rem;
 
-    h2, p {
-        width: $text-width;
+header {
+    margin-top: $space-lg;
+
+    h1 {
+        margin-bottom: .75rem;
+    }
+
+    .intro {
+        margin-top: $space-lg - 1rem;
+        margin-bottom: 1.5rem;
     }
 }
+
+nav {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
 
 section {
 
@@ -51,6 +59,10 @@ section {
 
 article {
 
+}
+
+footer {
+    margin: 7.5rem auto 2.5rem;
 }
 
 
@@ -76,7 +88,6 @@ article {
 
     p {
         @extend %text-link;
-        // color: lighten($cText,40%);
         margin: 0 auto 0.25rem;
         opacity: 0;
     }
@@ -98,31 +109,10 @@ article {
 /* Nav
    ------------------------------------------------------------------ */
 
-nav {
-    margin: 2rem auto 0;
-    background-color: $cBgDeep;
-
-    /**
-     * Menu items
-     */
-
-     section {
-        height: scut-rem(300);
-        text-align: center;
-        text-shadow: 0 0 2px rgba(0,0,0,0.2);
-        color: #fff;
-        border-top: 1px solid #eaeaea;
-
-        &:first-of-type {
-            border-top: 0;
-        }
-     }
 
 
 
-    #boxdice {
-        background-image: url(/images/th-lg-boxdice.jpg);
-    }
-}
+
+
 
 

@@ -11,7 +11,7 @@
 $textMargin: 0 auto .5rem;
 
 %text {
-    font-family: join($font, $body-sans-family);
+    font-family: join("Freight Text", $body-serif-family);
     line-height: 1.4;
     font-weight: normal;
     font-style: normal;
@@ -20,7 +20,7 @@ $textMargin: 0 auto .5rem;
     text-decoration: none;
     letter-spacing: normal;
     text-rendering: optimizeLegibility;
-    // -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
     color: $cText;
     margin: $textMargin;
 
@@ -32,10 +32,12 @@ p, a, li, span {
     @include scut-rem-fallback(19);
 }
 
-ul { margin: $textMargin; }
+ul {
+    margin: $textMargin;
+    padding: 0;
+}
 
 li {
-    margin-left: 1rem;
     margin-bottom: 0;
 }
 
@@ -66,14 +68,13 @@ a {
 }
 
 h1 {
-    font-family: $font;
     @include scut-rem-fallback(60);
     line-height: 0.9;
 
     &.title {
-        font-family: join($fontBold, $body-serif-family);
-        @include scut-rem-fallback(33);
-        text-transform: uppercase;
+        font-family: join("bau-bold", $body-sans-family);
+        @include scut-rem-fallback(21);
+        // text-transform: uppercase;
         text-align: center;
     }
 }
