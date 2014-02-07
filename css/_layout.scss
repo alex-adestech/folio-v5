@@ -8,11 +8,16 @@
 /* Column widths
    ------------------------------------------------------------------ */
 
-$text-width: 42.5rem;
-$column-width: 60rem;
+$text-width: 43.75rem;
+$column-width: 53.75rem;
 
-.column { width: $column-width; }
-.column--text { width: $text-width; }
+.column { max-width: $column-width !important; }
+
+.column--text {
+    max-width: $text-width !important;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 /* Blocks
@@ -41,7 +46,7 @@ header {
         margin-bottom: .75rem;
     }
 
-    .intro {
+    summary {
         margin-top: $space-lg - 1rem;
         margin-bottom: 1.5rem;
     }
@@ -58,7 +63,9 @@ section {
 }
 
 article {
-
+    margin-top: 1rem;
+    margin-bottom: 7.5rem;
+    overflow: visible;
 }
 
 footer {

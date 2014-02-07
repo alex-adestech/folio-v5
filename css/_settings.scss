@@ -18,43 +18,14 @@ $container-width: scut-rem(900);
 $body-sans-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $body-serif-family: "Times New Roman", Times, Georgia, serif;
 
-@include scut-font-face('arnhem_blackregular', '/fonts/arnhem-black');
-@include scut-font-face('arnhem_blackitalic', '/fonts/arnhem-blackitalic');
-@include scut-font-face('arnhem_black_scregular', '/fonts/arnhem-blacksc');
-
-@include scut-font-face('arnhem_boldregular', '/fonts/arnhem-bold');
-@include scut-font-face('arnhem_bolditalic', '/fonts/arnhem-bolditalic');
-@include scut-font-face('arnhem_bold_scregular', '/fonts/arnhem-boldsc');
-
-@include scut-font-face('arnhem_normalregular', '/fonts/arnhem-normal');
-@include scut-font-face('arnhem_normalitalic', '/fonts/arnhem-normalitalic');
-@include scut-font-face('arnhem_normal_scregular', '/fonts/arnhem-normalsc');
-
-@include scut-font-face('arnhem_blondregular', '/fonts/arnhem-blond');
-@include scut-font-face('arnhem_blonditalic', '/fonts/arnhem-blonditalic');
-@include scut-font-face('arnhem_blond_scregular', '/fonts/arnhem-blondsc');
-
-$fontSerif:      'arnhem_blondregular';
-$fontSerifReg:   'arnhem_normalregular';
-$fontSerifBold:  'arnhem_boldregular';
-$fontSerifBlack: 'arnhem_blackregular';
-
-@include scut-font-face('theinhardt_lightregular', '/fonts/theinhardtlight_alt-webfont');
-@include scut-font-face('theinhardt_regular', '/fonts/theinhardtreg-webfont');
-@include scut-font-face('theinhardt_lightbold', '/fonts/theinhardtmed-webfont');
-@include scut-font-face('theinhardt_bold', '/fonts/theinhardtbold-webfont');
-
-$fontLite:       'theinhardt_lightregular';
-$fontReg:        'theinhardt_regular';
-$fontMed:        'theinhardt_lightbold';
-$fontBold:       'theinhardt_bold';
-
-// $font: "Harriet Text Light";
-
 @include scut-font-face('bau-bold', '/fonts/bau-bold');
+@include scut-font-face('bau-medium', '/fonts/bau-medium');
+@include scut-font-face('bau-regular', '/fonts/bau-regular');
 
-
-
+$fontText: "Freight Text";
+$fontDisplay: "Freight Display";
+$fontHead: "bau-bold";
+$fontNote: "bau-regular";
 
 
 /* Colours
@@ -63,11 +34,8 @@ $fontBold:       'theinhardt_bold';
 $cText: #222;
 $cText50: #999;
 $cText20: #aaa;
-// $cLink: rgb(255,28,36);
 $cLink: rgb(0,176,255);
-$cRed: #cc0000;
 $cBg: #fdfdfd;
-$cBgDeep: #fdfdfd;
 
 
 

@@ -5,48 +5,6 @@
 
    ================================================================== */
 
-/**
- * p variations
- */
-
-%text-sm { @include scut-rem-fallback(16);}
-%text-md { @include scut-rem-fallback(18);}
-%text-lg { @include scut-rem-fallback(27);}
-%text-super { @include scut-rem-fallback(40);}
-
-%text-link {
-    font-style: italic;
-    text-align: center;
-}
-
-%text-light {
-    color: lighten($cText,40%);
-}
-
-
-
-/* Header
-   ------------------------------------------------------------------ */
-
-header {
-}
-
-.intro {
-    p, a {
-        font-family: "Freight Display";
-        // font-style: italic;
-        @extend %text-super;
-        line-height: 1.2;
-    }
-
-    a {
-        text-decoration: none;
-        color: lighten($cText,40%);
-        &:hover { color: $cText; }
-    }
-}
-
-
 
 /* Nav
    ------------------------------------------------------------------ */
@@ -70,20 +28,17 @@ nav {
             font-style: italic;
         }
 
-        &:hover li {
-            background-color: lighten($cLink,40%);
-            transition: background-color 1s ease-out;
-            // border-left-color: $cText;
-            // border-right-color: $cText;
-            // &:last-of-type: { border-bottom-color: $cText; }
+        &:hover li,
+        &:hover .project-title {
+            color: $cLink;
+            // background-color: lighten($cLink,46%);
+            // transition: all 0.2s ease-in;
         }
     }
-}
 
-.project-title {
-    @extend h1.title;
-    text-align: left;
-    margin-right: .5rem;
+    &.grey li {
+        color: lighten($cText,55%);
+    }
 }
 
 
@@ -91,8 +46,8 @@ nav {
 /* Contact (colophon)
    ------------------------------------------------------------------ */
 
-p.contact,
-p.contact a {
+p.interact,
+p.interact a {
     @extend %text-sm;
     @extend %text-link;
 }
