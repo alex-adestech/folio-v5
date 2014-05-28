@@ -24,8 +24,9 @@ nav {
             border-left: 1px solid transparent;
             border-right: 1px solid transparent;
             border-bottom: 1px solid transparent;
+            font-family: join($fontTextItalic, $body-serif-family);
+            // font-style: italic;
             @extend %text-sm;
-            font-style: italic;
         }
 
         &:hover li,

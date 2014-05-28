@@ -62,7 +62,8 @@ a {
 }
 
 %text-link {
-    font-style: italic;
+    font-family: join($fontTextItalic, $body-serif-family);
+    // font-style: italic;
     text-align: center;
 }
 
