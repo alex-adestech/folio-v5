@@ -5,13 +5,13 @@
 
    ================================================================== */
 
+
+
 /* p, a & lists
    ------------------------------------------------------------------ */
 
-$textMargin: 0 auto .5rem;
-
 %text {
-    font-family: join($font, $body-sans-family);
+    font-family: join($fontText, $body-serif-family);
     line-height: 1.4;
     font-weight: normal;
     font-style: normal;
@@ -20,23 +20,21 @@ $textMargin: 0 auto .5rem;
     text-decoration: none;
     letter-spacing: normal;
     text-rendering: optimizeLegibility;
-    // -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
     color: $cText;
-    margin: $textMargin;
-
+    margin: 0 auto .75rem;
+    padding: 0;
 }
 
-
-p, a, li, span {
+p, a, ul, li, span {
     @extend %text;
-    @include scut-rem-fallback(19);
+    @include scut-rem-fallback(21);
 }
 
-ul { margin: $textMargin; }
-
-li {
-    margin-left: 1rem;
-    margin-bottom: 0;
+ul {
+    li {
+        margin-bottom: 0;
+    }
 }
 
 a {
@@ -47,7 +45,53 @@ a {
         color: $cLink;
         text-decoration: none;
     }
+
+    &.lighten {
+        text-decoration: none;
+        color: lighten($cText,40%);
+        &:hover { color: $cLink; }
+    }
+
     img { border: none; }
+}
+
+
+
+/**
+ * p variations
+ */
+
+%text-note  { @include scut-rem-fallback(12);}
+%text-sm    { @include scut-rem-fallback(16);}
+%text-lg    { @include scut-rem-fallback(32);}
+%text-super { @include scut-rem-fallback(40);}
+
+%text-display {
+    font-family: join($fontDisplay, $body-serif-family);
+    line-height: 1.2;
+}
+
+%text-link {
+    font-family: join($fontTextItalic, $body-serif-family);
+    text-align: center;
+}
+
+%text-light {
+    color: lighten($cText,40%);
+}
+
+
+
+p.em {
+    font-family: join($fontTextItalic, $body-serif-family); //$fontDisplayItalic
+}
+
+p.xs {
+    @extend %text-note;
+}
+
+p.before-note {
+    margin-bottom: 0;
 }
 
 
@@ -58,31 +102,15 @@ a {
 @for $index from 1 through 6 {
     h#{$index} {
         @extend %text;
-        font-family: join($fontBold, $body-serif-family);
+        font-family: join($fontHead, $body-sans-family);
+        font-weight: 400;
         @include scut-rem-fallback(16);
-        // text-transform: uppercase;
-        // letter-spacing: 1px;
     }
 }
 
 h1 {
-    font-family: $font;
-    @include scut-rem-fallback(60);
-    line-height: 0.9;
-
-    &.title {
-        font-family: join($fontBold, $body-serif-family);
-        @include scut-rem-fallback(33);
-        text-transform: uppercase;
-        text-align: center;
-    }
-}
-
-h2 {
-    font-family: $fontMed;
-    @include scut-rem-fallback(29);
+    @include scut-rem-fallback(22);
     line-height: 1;
     text-transform: uppercase;
 }
-
 

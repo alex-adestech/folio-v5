@@ -20,10 +20,29 @@ img {
 }
 
 /**
- * Wrap an img to center it in a p.
+ * Wrap an img in figure to center it
+ * Don't give it a width, so you can break the grid
+ * (see Medium's blockquote layout for how)
  */
 
 figure {
-    margin: 1.75rem 0 2rem;
+    margin: 3rem 0;
     text-align: center;
+
+    &.lg {
+        margin-left: -5rem;
+        margin-right: -5rem;
+    }
+
+    &.sm {
+        margin: 6rem 0;
+    }
+}
+
+figcaption {
+    font-family: join($fontNote, $body-sans-family);
+    @extend %text-note;
+    // text-align: left;
+    color: lighten($cText,55%);
+    margin-top: 2rem;
 }

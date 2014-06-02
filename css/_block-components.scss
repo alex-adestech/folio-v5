@@ -21,11 +21,6 @@
     @media #{$small-only}  { padding-bottom: 100%; }
 }
 
-.CoverImageTint {
-    @extend %Overlay;
-    background-color: rgba(black,0.75);
-}
-
 .CoverImage--vignette::after {
     content: "";
     display: block;

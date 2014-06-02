@@ -1,0 +1,31 @@
+
+/* ==========================================================================
+
+   TRANSITION ON PAGE LOAD
+
+   ========================================================================== */
+
+body.is-fadedIn {
+    background-color: lighten($cLink,46%);
+    -webkit-transition: background-color 1s ease-in;
+       -moz-transition: background-color 1s ease-in;
+         -o-transition: background-color 1s ease-in;
+            transition: background-color 1s ease-in;
+}
+
+header.is-fadedIn {
+    opacity: 1;
+    -webkit-transition: opacity 1s ease-in;
+       -moz-transition: opacity 1s ease-in;
+         -o-transition: opacity 1s ease-in;
+            transition: opacity 1s ease-in;
+}
+
+section.is-fadedIn {
+    opacity: 1;
+    -webkit-transition: opacity 1s ease-in 3s;
+       -moz-transition: opacity 1s ease-in 3s;
+         -o-transition: opacity 1s ease-in 3s;
+            transition: opacity 1s ease-in 3s;
+}
+

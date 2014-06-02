@@ -5,101 +5,56 @@
 
    ================================================================== */
 
-/**
- * p variations
- */
-
-%text-sm {
-    @include scut-rem-fallback(16);
-}
-
-%text-md {
-    @include scut-rem-fallback(18);
-}
-
-%text-lg {
-    @include scut-rem-fallback(27);
-}
-
-%text-link {
-    font-style: italic;
-    text-align: center;
-}
-
-%text-light {
-    color: lighten($cText,40%);
-}
-
-
-
-/* Rule
-   ------------------------------------------------------------------ */
-
-.rule-base {
-    width: $column-width;
-    margin: 1.75rem auto 2rem;
-    border-bottom: .625rem solid $cText;
-}
-
-.rule-light-bottom {
-    border-bottom: 1px dotted lighten($cText,60%);
-}
-
-
-
-/* Header
-   ------------------------------------------------------------------ */
-
-header {
-    p, a {
-        @extend %text-lg;
-    }
-    p.contact,
-    p.contact a {
-        @extend %text-link;
-        @extend %text-sm;
-    }
-}
-
-
 
 /* Nav
    ------------------------------------------------------------------ */
 
 nav {
+    ul {
+        list-style: none;
+    }
 
-    #scroll-start a {
+    a {
         text-decoration: none;
 
-        h1 { margin-bottom: .25rem; }
-
-        summary {
-            @extend %text;
+        li {
+            width: 100%;
+            padding: scut-rem(6) scut-rem(6) scut-rem(8) 0;
+            border-top: 1px solid $cText;
+            border-left: 1px solid transparent;
+            border-right: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+            font-family: join($fontTextItalic, $body-serif-family);
+            // font-style: italic;
             @extend %text-sm;
-            @extend %text-light;
-            font-family: $fontLite;
-            line-height: 1.2;
-            padding-bottom: 0.5rem;
         }
 
-        h1,
-        summary,
-        p {
-            text-align: center;
-            color: #ccc;
-        }
-
-        p { margin-bottom: 0; }
-
-        &:hover {
-            h1,
-            summary,
-            p {
-                color: white;
-                transition: color 0.4s ease-out;
-            }
+        &:hover li,
+        &:hover .project-title {
+            color: $cLink;
+            // background-color: lighten($cLink,46%);
+            // transition: all 0.2s ease-in;
         }
     }
+
+    &.grey li {
+        color: lighten($cText,55%);
+    }
 }
+
+
+
+/* Contact (colophon)
+   ------------------------------------------------------------------ */
+
+p.interact,
+p.interact a {
+    @extend %text-sm;
+    @extend %text-link;
+}
+
+
+
+
 
 
