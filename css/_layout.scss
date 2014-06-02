@@ -25,8 +25,8 @@ $column-width: scut-rem(860);
    ------------------------------------------------------------------ */
 
 .container {
-    margin: 5rem;
-    @include bp(sm) { margin: 2.5rem; }
+    margin: 5rem 5rem 7.5rem;
+    @include bp(sm) { margin: 2.5rem 2.5rem 5rem; }
 }
 
 header,
