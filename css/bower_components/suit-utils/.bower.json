@@ -1,0 +1,27 @@
+{
+  "name": "suit-utils",
+  "version": "0.9.0",
+  "author": "Nicolas Gallagher",
+  "dependencies": {
+    "suit-utils-align": "~0.1.1",
+    "suit-utils-display": "~0.3.0",
+    "suit-utils-layout": "~0.3.0",
+    "suit-utils-link": "~0.4.0",
+    "suit-utils-offset": "~0.4.2",
+    "suit-utils-position": "~0.1.0",
+    "suit-utils-size": "~0.6.2",
+    "suit-utils-state": "~0.3.0",
+    "suit-utils-text": "~0.3.0"
+  },
+  "homepage": "https://github.com/suitcss/utils",
+  "_release": "0.9.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.9.0",
+    "commit": "46d0470fb4ef7735fbe0a0f150665ae59bc02a7f"
+  },
+  "_source": "git://github.com/suitcss/utils.git",
+  "_target": "~0.9.0",
+  "_originalSource": "suit-utils",
+  "_direct": true
+}

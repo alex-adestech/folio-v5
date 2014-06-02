@@ -1,23 +1,51 @@
 
 /* =========================================================================
 
-   Application
+   Application styles
 
    ========================================================================= */
 
 @import "bower_components/normalize-css/normalize";
 @import "bower_components/scut/dist/_scut";
-@import "bower_components/suit-flex-embed/flex-embed";
-@import "vendor/foundation.tooltip";
 
 @import "settings";
-@import "helpers";
+
+@import "bower_components/suit-utils-after/after";
+@import "bower_components/suit-utils-after/after-sm";
+@import "bower_components/suit-utils-after/after-md";
+@import "bower_components/suit-utils-after/after-lg";
+@import "bower_components/suit-utils-align/align";
+@import "bower_components/suit-utils-before/before";
+@import "bower_components/suit-utils-before/before-sm";
+@import "bower_components/suit-utils-before/before-md";
+@import "bower_components/suit-utils-before/before-lg";
+@import "bower_components/suit-utils-display/display";
+@import "bower_components/suit-utils-layout/layout";
+@import "bower_components/suit-utils-link/link";
+@import "bower_components/suit-utils-position/position";
+// @import "bower_components/suit-utils-size/size";
+// @import "bower_components/suit-utils-size/size-sm";
+// @import "bower_components/suit-utils-size/size-md";
+// @import "bower_components/suit-utils-size/size-lg";
+@import "bower_components/suit-utils-state/state";
+@import "bower_components/suit-utils-text/text";
+
+// @import "bower_components/suit-flex-embed/flex-embed";
+@import "bower_components/suit-components-grid/grid";
+
+// @import "helpers";
 @import "type";
 @import "layout";
-@import "block-components";
-@import "type-components";
+// @import "block-components";
+// @import "type-components";
 @import "img";
+@import "transition";
+
+
 
 * { box-sizing: border-box; }
 
-body { background: $cBg; }
+body {
+    background-color: lighten($cLink,46%);
+    height: 100%;
+}

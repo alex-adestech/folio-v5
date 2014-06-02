@@ -5,6 +5,8 @@
 
    ================================================================== */
 
+
+
 /* p, a & lists
    ------------------------------------------------------------------ */
 
@@ -20,7 +22,7 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     color: $cText;
-    margin: 0 auto .5rem;
+    margin: 0 auto .75rem;
     padding: 0;
 }
 
@@ -44,16 +46,24 @@ a {
         text-decoration: none;
     }
 
+    &.lighten {
+        text-decoration: none;
+        color: lighten($cText,40%);
+        &:hover { color: $cLink; }
+    }
+
     img { border: none; }
 }
+
+
 
 /**
  * p variations
  */
 
-%text-note { @include scut-rem-fallback(13);}
-%text-sm { @include scut-rem-fallback(16);}
-%text-lg { @include scut-rem-fallback(30);}
+%text-note  { @include scut-rem-fallback(12);}
+%text-sm    { @include scut-rem-fallback(16);}
+%text-lg    { @include scut-rem-fallback(32);}
 %text-super { @include scut-rem-fallback(40);}
 
 %text-display {
@@ -63,7 +73,6 @@ a {
 
 %text-link {
     font-family: join($fontTextItalic, $body-serif-family);
-    // font-style: italic;
     text-align: center;
 }
 
@@ -71,38 +80,19 @@ a {
     color: lighten($cText,40%);
 }
 
-/**
- * Home 'about' summary
- */
 
-.intro,
-.intro a {
-    @extend %text-display;
+
+p.em {
+    font-family: join($fontTextItalic, $body-serif-family); //$fontDisplayItalic
 }
 
-.intro a {
-    text-decoration: none;
-    color: lighten($cText,40%);
-    &:hover { color: $cLink; }
+p.xs {
+    @extend %text-note;
 }
 
-.intro--super,
-.intro--super a {
-    @extend %text-super;
+p.before-note {
+    margin-bottom: 0;
 }
-
-.intro--lg,
-.intro--lg a {
-    font-family: join($fontText, $body-serif-family);
-    @extend %text-lg;
-    text-align: center;
-    margin-top: 2rem
-}
-
-/**
- * Figure captions
- */
-
 
 
 
@@ -113,42 +103,14 @@ a {
     h#{$index} {
         @extend %text;
         font-family: join($fontHead, $body-sans-family);
+        font-weight: 400;
         @include scut-rem-fallback(16);
     }
 }
 
 h1 {
-    @include scut-rem-fallback(21);
-    text-align: center;
-    line-height: 0.9;
-}
-
-h2 {
-    @include scut-rem-fallback(29);
+    @include scut-rem-fallback(22);
     line-height: 1;
     text-transform: uppercase;
 }
-
-/**
- * h variations
- */
-
-.project-title,
-.link-home {
-    @extend h1;
-    text-align: left;
-    margin: 0 .5rem .5rem auto;
-}
-
-.link-home {
-    position: fixed;
-    top: 5rem;
-    left: 1.5rem;
-    text-decoration: none;
-}
-
-
-
-
-
 
