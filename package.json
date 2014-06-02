@@ -1,6 +1,6 @@
 {
-  "name": "Callum Flack placeholder site",
-  "version": "0.0.1",
+  "name": "folio-v5",
+  "version": "0.0.0",
   "description": "A placeholder for Callum Flack's work history, capabilities and contact details",
   "main": "server.js",
   "scripts": {
