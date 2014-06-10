@@ -29,11 +29,30 @@
 p, a, ul, li, span {
     @extend %text;
     @include scut-rem-fallback(21);
+    @include bp(sm) { @include scut-rem-fallback(17); }
 }
 
 ul {
+    // padding-left: scut-rem(18);
+    list-style: none;
+
     li {
         margin-bottom: 0;
+        left: -18px;
+
+        &:before {
+            content: "\00d7";
+            text-indent: 0;
+            display: inline-block;
+            width: 0;
+            position: relative;
+            left: scut-rem(-22);
+        }
+    }
+
+    @include bp(sm) {
+        li { text-indent: scut-rem(18); }
+        li:before { left: scut-rem(-18); }
     }
 }
 
@@ -110,6 +129,7 @@ p.before-note {
 
 h1 {
     @include scut-rem-fallback(22);
+    @include bp(sm) { @include scut-rem-fallback(18); }
     line-height: 1;
     text-transform: uppercase;
 }
